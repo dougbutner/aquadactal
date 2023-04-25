@@ -21,7 +21,7 @@ constexpr auto max_group_size = size_t{8};
 // const auto defaultRewardConfig =
 // rewardconfig{.zeos_reward_amt = (int64_t)100e4, .fib_offset = 5};
 
-const auto eleclimit = seconds(7200);
+const auto eleclimit = seconds(21600);
 
 constexpr std::string_view edenTransferMemo =
     "Eden fractal respect distribution";
