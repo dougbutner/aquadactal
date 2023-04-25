@@ -24,14 +24,14 @@ constexpr auto max_group_size = size_t{8};
 const auto eleclimit = seconds(21600);
 
 constexpr std::string_view edenTransferMemo =
-    "Eden fractal respect distribution";
+    "Aquadactal $AQUA distribution";
 constexpr std::string_view eosTransferMemo =
-    "Eden fractal participation $EOS reward";
+    "Aquadactal extra $AQUA reward";
 
 // Coefficients of 6th order poly where p is phi (ratio between adjacent
 // fibonacci numbers) xp^0 + xp^1 ...
 constexpr std::array<double, max_group_size> polyCoeffs{
-    1, 1.618, 2.617924, 4.235801032, 6.85352607, 11.08900518};
+    1, 1.382, 1.9099, 2.6395, 3.6478, 5.0413, 6.9670, 9.6284};
 
 // Other helpers
 auto fib(uint8_t index) -> decltype(index) { //
