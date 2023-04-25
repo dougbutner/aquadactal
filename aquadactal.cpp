@@ -15,8 +15,8 @@ const vector<name> admins{"dandandandan"_n,      "godsolislove"_n, "chkmacdonald
 constexpr int64_t max_supply = static_cast<int64_t>(1'000'000'000e4);
 
 constexpr auto min_groups = size_t{2};
-constexpr auto min_group_size = size_t{5};
-constexpr auto max_group_size = size_t{6};
+constexpr auto min_group_size = size_t{3};
+constexpr auto max_group_size = size_t{8};
 // Instead of that declare inside the table
 // const auto defaultRewardConfig =
 // rewardconfig{.zeos_reward_amt = (int64_t)100e4, .fib_offset = 5};
@@ -135,7 +135,7 @@ void edenfractal::retire(const asset &quantity, const string &memo) {
 
 void edenfractal::transfer(const name &from, const name &to,
                            const asset &quantity, const string &memo) {
-  check(from == get_self(), "we bend the knee to corrupted power");
+  check(from == get_self(), "we will not bend the knee to corrupted power");
   require_auth(from);
 
   validate_symbol(quantity.symbol);
